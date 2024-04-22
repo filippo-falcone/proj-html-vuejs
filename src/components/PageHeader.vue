@@ -45,7 +45,7 @@ export default {
 header {
     .navbar {
         .nav-link {
-            color: $brand-light;
+            color: $brand-light-secondary;
             cursor: pointer;
 
             &.active {
@@ -63,7 +63,7 @@ header {
 
                 &:hover {
                     background-color: $brand-primary;
-                    color: $brand-light;
+                    color: $brand-light-secondary;
                 }
             }
         }

@@ -47,7 +47,7 @@ export default {
   &.big {
     &.brand-primary {
       background-color: $brand-primary;
-      color: $brand-light;
+      color: $brand-light-secondary;
   
       &:hover {
         background-color: transparent;
@@ -58,7 +58,7 @@ export default {
 
     &.brand-secondary {
       background-color: $brand-secondary;
-      color: $brand-light;
+      color: $brand-light-secondary;
   
       &:hover {
         background-color: transparent;
