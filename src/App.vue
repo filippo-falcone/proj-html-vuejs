@@ -43,6 +43,10 @@ export default {
 @use './style/generic.scss';
 @use './style/partials/variables' as *;
 
+p {
+  color: $brand-dark-light;
+}
+
 .btn {
   &.big {
     &.brand-primary {

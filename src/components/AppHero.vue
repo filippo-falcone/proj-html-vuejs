@@ -30,5 +30,9 @@ export default {}
     background-repeat: no-repeat;
     background-position: center;
     color: $brand-light-secondary;
+    
+    p {
+        color: $brand-light-secondary;
+    }
 }
 </style>

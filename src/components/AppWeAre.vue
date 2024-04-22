@@ -46,14 +46,22 @@ export default {
 
 .who-we-are {
     background-color: $brand-light-primary;
-
-    .text {
-        width: 40%;
-    }
-
+    
     .row {
+        .col-12 {
+            .text {
+                width: 40%;
+            }
+        }
+
         .col {
             background-color: #ffffff;
+
+            &:hover {
+                h4 {
+                    color: $brand-primary;
+                }
+            }
 
             .fa-solid {
                 color: $brand-primary;
