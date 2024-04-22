@@ -26,7 +26,7 @@ export default {}
     height: 100vh;
     margin-top: -4.1875rem;
     background-image: url(../assets/images/1-hero-image.png);
-    background-size: 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     color: $brand-light;
 }
