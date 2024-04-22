@@ -49,6 +49,7 @@ export default {}
     padding-bottom: 6.25rem;
     background-color: #051642;
     background-image: url(../assets/images/pattern_background.png);
+    background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     color: $brand-light-primary;
