@@ -6,5 +6,11 @@ img {
 
 .btn {
     padding: .0625rem .375rem;
+    font-size: 12px;
+    font-weight: 700;
     text-transform: uppercase;
+
+    &.big {
+        padding: 0.5rem 1.5rem;
+    }
 }

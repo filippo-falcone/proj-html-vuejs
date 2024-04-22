@@ -28,11 +28,11 @@ export default {
         </button>
         <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li v-for="linkInfo, index in linksInfo" class="nav-item d-flex align-items-center" @click="activeLink(index)">
+                <li v-for="linkInfo, index in linksInfo" class="nav-item d-flex align-items-center me-4" @click="activeLink(index)">
                     <a class="nav-link" :class="{'active': index == activeItem}">{{ linkInfo.name }}</a>
-                    <button v-if="linkInfo.name === 'Careers'" class="btn btn-outline-primary">apply</button>
+                    <button v-if="linkInfo.name === 'Careers'" class="btn small">apply</button>
                 </li>
-                <button class="btn btn-success rounded-pill">get in touch now</button>
+                <button class="btn big rounded-pill">get in touch now</button>
             </ul>
         </div>
     </div>
@@ -43,8 +43,6 @@ export default {
 <style scoped lang="scss">
 @use '../style/partials/variables' as *;
 header {
-    background-color: red;
-
     .navbar {
         .nav-link {
             color: $brand-light;
@@ -56,6 +54,28 @@ header {
 
             &:hover {
                 color: $brand-primary;
+            }
+        }
+        .btn {
+            &.small {
+                border: 1px solid $brand-primary;
+                color: $brand-primary;
+
+                &:hover {
+                    background-color: $brand-primary;
+                    color: $brand-light;
+                }
+            }
+
+            &.big {
+                background-color: $brand-primary;
+                color: $brand-light;
+
+                &:hover {
+                    background-color: transparent;
+                    border: 1px solid $brand-primary;
+                    color: $brand-primary;
+                }
             }
         }
     }
