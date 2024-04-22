@@ -32,7 +32,7 @@ export default {
                     <a class="nav-link" :class="{'active': index == activeItem}">{{ linkInfo.name }}</a>
                     <button v-if="linkInfo.name === 'Careers'" class="btn small">apply</button>
                 </li>
-                <button class="btn big rounded-pill">get in touch now</button>
+                <button class="btn big brand-primary rounded-pill">get in touch now</button>
             </ul>
         </div>
     </div>
@@ -64,17 +64,6 @@ header {
                 &:hover {
                     background-color: $brand-primary;
                     color: $brand-light;
-                }
-            }
-
-            &.big {
-                background-color: $brand-primary;
-                color: $brand-light;
-
-                &:hover {
-                    background-color: transparent;
-                    border: 1px solid $brand-primary;
-                    color: $brand-primary;
                 }
             }
         }
