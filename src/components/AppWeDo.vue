@@ -45,8 +45,8 @@ export default {}
 @use '../style/partials/variables' as *;
 
 .what-we-do {
-    padding-top: 40px;
-    padding-bottom: 150px;
+    padding-top: 2rem;
+    padding-bottom: 6.25rem;
     background-color: #051642;
     background-image: url(../assets/images/pattern_background.png);
     background-size: contain;
