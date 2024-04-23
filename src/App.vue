@@ -1,9 +1,11 @@
 <script>
+import PageFooter from './components/PageFooter.vue';
 import PageHeader from './components/PageHeader.vue';
 import PageMain from './components/PageMain.vue';
 
 export default {
   components: {
+    PageFooter,
     PageHeader,
     PageMain
   },
@@ -12,22 +14,32 @@ export default {
       links: [
       {
         name: 'Home',
+        button: false
       },
       {
-        name: 'Who We Are'
+        name: 'Who We Are',
+        button: false
       },
       {
-        name: 'What We Do'
+        name: 'What We Do',
+        button: false
       },
       {
-        name: 'What We Work'
+        name: 'What We Work',
+        button: false
       },
       {
-        name: 'Careers'
+        name: 'Careers',
+        button: false
       },
       {
-        name: 'News'
+        name: 'News',
+        button: false
       },
+      {
+        name: 'Get in Touch Now',
+        button: true
+      }
     ]
     };
   } 
@@ -37,6 +49,7 @@ export default {
 <template>
   <PageHeader :linksInfo="links"></PageHeader>
   <PageMain></PageMain>
+  <PageFooter :linksInfo="links"></PageFooter>
 </template>
 
 <style lang="scss">
