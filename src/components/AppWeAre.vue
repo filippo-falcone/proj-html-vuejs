@@ -9,19 +9,19 @@ export default {
         return {
             info: [
                 {
-                    icon: 'fa-road',
+                    icon: 'fa-solid fa-road',
                     title: 'Establish Goals',
                     text: 'Aliquam non elit lacus. Praesent aliquet, ipsum id scelerisque convallis, mi ligula euismond odio, vel dictum mi risus a mi.',
                     link: false
                 },
                 {
-                    icon: 'fa-video',
+                    icon: 'fa-solid fa-video',
                     title: 'Work With a Team',
                     text: 'Cras semper auctor aliquam. Sed porta sed lacus sit amet consectetur. Lorem ipsum dolor sit amet, consectetur adipiscin.',
                     link: false
                 },
                 {
-                    icon: 'fa-droplet',
+                    icon: 'fa-solid fa-droplet',
                     title: 'Get Results',
                     text: 'Vestibulum scelerisque egestas lectus sit amet molestie. Donec consectetur cursus est sed blandit. Nunc sed risus lacus.',
                     link: false
@@ -73,7 +73,7 @@ export default {
                 }
             }
 
-            .fa-solid {
+            .icon {
                 color: $brand-primary;
             }
         }

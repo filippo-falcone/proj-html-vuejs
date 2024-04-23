@@ -9,25 +9,25 @@ export default {
         return {
             info: [
                 {
-                    icon: 'fa-road',
+                    icon: 'fa-brands fa-google',
                     title: 'Google SEO',
                     text: 'Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.',
                     link: true
                 },
                 {
-                    icon: 'fa-video',
+                    icon: 'fa-solid fa-gear',
                     title: 'Brand Strategy',
                     text: 'Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.',
                     link: true
                 },
                 {
-                    icon: 'fa-droplet',
+                    icon: 'fa-solid fa-building',
                     title: 'Local SEO',
                     text: 'Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.',
                     link: true
                 },
                 {
-                    icon: 'fa-droplet',
+                    icon: 'fa-solid fa-chart-column',
                     title: 'SEO Analysis',
                     text: 'Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.',
                     link: true
@@ -88,7 +88,7 @@ export default {
                 }
             }
 
-            .fa-solid {
+            .icon {
                 color: $brand-primary;
             }
             
