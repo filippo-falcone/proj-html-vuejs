@@ -1,8 +1,32 @@
 <script>
+import ColCard from './ColCard.vue';
+
 export default {
+    components: {
+        ColCard
+    },
     data() {
         return {
-
+            info: [
+                {
+                    icon: 'fa-road',
+                    title: 'Establish Goals',
+                    text: 'Aliquam non elit lacus. Praesent aliquet, ipsum id scelerisque convallis, mi ligula euismond odio, vel dictum mi risus a mi.',
+                    link: false
+                },
+                {
+                    icon: 'fa-video',
+                    title: 'Work With a Team',
+                    text: 'Cras semper auctor aliquam. Sed porta sed lacus sit amet consectetur. Lorem ipsum dolor sit amet, consectetur adipiscin.',
+                    link: false
+                },
+                {
+                    icon: 'fa-droplet',
+                    title: 'Get Results',
+                    text: 'Vestibulum scelerisque egestas lectus sit amet molestie. Donec consectetur cursus est sed blandit. Nunc sed risus lacus.',
+                    link: false
+                }
+            ]
         };
     }
 }
@@ -17,22 +41,8 @@ export default {
                         <h3 class="mb-4">Meet The New Agency SEO Template From The Avada Team</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
                     </div>
-                 </div>
-                <div class="col py-5 me-4">
-                    <i class="fa-solid fa-road mb-4 fs-3"></i>
-                    <h4 class="mb-3">Establish Goals</h4>
-                    <p>Aliquam non elit lacus. Praesent aliquet, ipsum id scelerisque convallis, mi ligula euismond odio, vel dictum mi risus a mi.</p>
                 </div>
-                <div class="col py-5 me-4">
-                    <i class="fa-solid fa-video mb-4 fs-3"></i>
-                    <h4 class="mb-3">Work With a Team</h4>
-                    <p>Cras semper auctor aliquam. Sed porta sed lacus sit amet consectetur. Lorem ipsum dolor sit amet, consectetur adipiscin.</p>
-                </div>
-                <div class="col py-5">
-                    <i class="fa-solid fa-droplet mb-4 fs-3"></i>
-                    <h4 class="mb-3">Establish Goals</h4>
-                    <p>Aliquam non elit lacus. Praesent aliquet, ipsum id scelerisque convallis, mi ligula euismond odio, vel dictum mi risus a mi.</p>
-                </div>
+                <ColCard v-for="singleInfo in info" :info="singleInfo"></ColCard>
            </div>
            <div>
                 <img src="../assets/images/agency-seo-desk-front.jpg" alt="">
@@ -41,7 +51,7 @@ export default {
     </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use '../style/partials/variables' as *;
 
 .who-we-are {
@@ -53,7 +63,7 @@ export default {
                 width: 40%;
             }
         }
-
+        
         .col {
             background-color: $brand-light-tertiary;
 

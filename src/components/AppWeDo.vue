@@ -1,5 +1,41 @@
 <script>
-export default {}
+import ColCard from './ColCard.vue';
+
+export default {
+    components: {
+        ColCard
+    },
+    data() {
+        return {
+            info: [
+                {
+                    icon: 'fa-road',
+                    title: 'Google SEO',
+                    text: 'Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.',
+                    link: true
+                },
+                {
+                    icon: 'fa-video',
+                    title: 'Brand Strategy',
+                    text: 'Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.',
+                    link: true
+                },
+                {
+                    icon: 'fa-droplet',
+                    title: 'Local SEO',
+                    text: 'Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.',
+                    link: true
+                },
+                {
+                    icon: 'fa-droplet',
+                    title: 'SEO Analysis',
+                    text: 'Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.',
+                    link: true
+                }
+            ]
+        };
+    }
+}
 </script>
 
 <template>
@@ -11,37 +47,14 @@ export default {}
                         <h3 class="mb-4">See Our Top Notch Services</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
                     </div>
-                 </div>
-                 <div class="col py-5 me-4">
-                    <i class="fa-solid fa-road mb-4 fs-3"></i>
-                    <h4 class="mb-3">Google SEO</h4>
-                    <p>Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.</p>
-                    <a href="#">Read More ></a>
                 </div>
-                <div class="col py-5 me-4">
-                    <i class="fa-solid fa-video mb-4 fs-3"></i>
-                    <h4 class="mb-3">Brand Strategy</h4>
-                    <p>Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.</p>
-                    <a href="#">Read More ></a>
-                </div>
-                <div class="col py-5 me-4">
-                    <i class="fa-solid fa-droplet mb-4 fs-3"></i>
-                    <h4 class="mb-3">Local SEO</h4>
-                    <p>Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.</p>
-                    <a href="#">Read More ></a>
-                </div>
-                <div class="col py-5">
-                    <i class="fa-solid fa-droplet mb-4 fs-3"></i>
-                    <h4 class="mb-3">SEO Analysis</h4>
-                    <p>Vestibulum in lacinia metus. Suspendisse in enim ipsum. Nulla facilisi. Donec ante turpis, dictum sed magna et, dapibus faucibus odio.</p>
-                    <a href="#">Read More ></a>
-                </div>
+                <ColCard v-for="singleInfo in info" :info="singleInfo"></ColCard>
            </div>
         </div>
     </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use '../style/partials/variables' as *;
 
 .what-we-do {
