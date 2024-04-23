@@ -1,5 +1,35 @@
 <script>
-export default {}
+import NewsCard from './NewsCard.vue';
+
+export default {
+    components: {
+        NewsCard
+    },
+    data() {
+        return {
+            info: [
+                {
+                    image: 'related-service-2-700x441',
+                    title: 'Why You Need A SEO Agency Now',
+                    date: 'November 1st, 2017',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit'
+                },
+                {
+                    image: 'related-service-4-700x441',
+                    title: 'SEO Tips For Your Startup',
+                    date: 'November 1st, 2017',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit'
+                },
+                {
+                    image: 'blog-post-6-700x441',
+                    title: 'Image Optimizazion For You Site',
+                    date: 'November 1st, 2017',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit'
+                }
+            ]
+        };
+    }
+}
 </script>
 
 <template>
@@ -11,43 +41,8 @@ export default {}
                         <h3 class="mb-4">Our News</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
                     </div>
-                 </div>
-                <div class="col-4">
-                    <div class="work-card">
-                        <div class="card-img">
-                            <img src="../assets/images/related-service-2-700x441.jpg" alt="">
-                        </div>
-                        <div class="card-text mt-4">
-                            <h4>Why You Need A SEO Agency Now</h4>
-                            <small>November 1st, 2017</small>
-                            <p class="mt-3">ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit</p>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-4">
-                    <div class="work-card">
-                        <div class="card-img">
-                            <img src="../assets/images/related-service-4-700x441.jpg" alt="">
-                        </div>
-                        <div class="card-text mt-4">
-                            <h4>Why You Need A SEO Agency Now</h4>
-                            <small>November 1st, 2017</small>
-                            <p class="mt-3">ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="work-card">
-                        <div class="card-img">
-                            <img src="../assets/images/blog-post-6-700x441.jpg" alt="">
-                        </div>
-                        <div class="card-text mt-4">
-                            <h4>Why You Need A SEO Agency Now</h4>
-                            <small>November 1st, 2017</small>
-                            <p class="mt-3">ALorem ipsum dolor sit amet, consectetur adipiscing elit. In et scelerisque sem. Nunc molestie neque augue, at gravida mi blandit</p>
-                        </div>
-                    </div>
-                </div>
+                <NewsCard v-for="singleInfo in info" :info="singleInfo"></NewsCard>
                 <div class="col-12 btn-container py-4">
                     <button class="btn big brand-primary rounded-pill me-3">go to news</button>
                 </div>
@@ -56,7 +51,7 @@ export default {}
     </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use '../style/partials/variables' as *;
 
 .news {
