@@ -1,5 +1,35 @@
 <script>
-export default {}
+import WorkCard from './WorkCard.vue';
+
+export default {
+    components: {
+        WorkCard
+    },
+    data() {
+        return {
+            info: [
+                {
+                    image: 'case-study-gallery-3-1'
+                },
+                {
+                    image: 'case-study-gallery-2'
+                },
+                {
+                    image: 'case-study-gallery-1-1'
+                },
+                {
+                    image: 'case-study-gallery-4-1'
+                },
+                {
+                    image: 'case-study-gallery-5-1'
+                },
+                {
+                    image: 'case-study-gallery-6-1'
+                }
+            ]
+        };
+    }
+}
 </script>
 
 <template>
@@ -11,55 +41,8 @@ export default {}
                         <h3 class="mb-4">Our Work</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
                     </div>
-                 </div>
-                <div class="col-4">
-                    <div class="img-container">
-                        <img src="../assets/images/case-study-gallery-3-1.jpg" alt="">
-                        <div class="hover-container d-flex justify-content-center align-items-center">
-                            <i class="fa-solid fa-link fs-3"></i>
-                        </div>
-                    </div>
                 </div>
-                <div class="col-4">
-                    <div class="img-container">
-                        <img src="../assets/images/case-study-gallery-2.jpg" alt="">
-                        <div class="hover-container d-flex justify-content-center align-items-center">
-                            <i class="fa-solid fa-link fs-3"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="img-container">
-                        <img src="../assets/images/case-study-gallery-1-1.jpg" alt="">
-                        <div class="hover-container d-flex justify-content-center align-items-center">
-                            <i class="fa-solid fa-link fs-3"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="img-container">
-                        <img src="../assets/images/case-study-gallery-4-1.jpg" alt="">
-                        <div class="hover-container d-flex justify-content-center align-items-center">
-                            <i class="fa-solid fa-link fs-3"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="img-container">
-                        <img src="../assets/images/case-study-gallery-5-1.jpg" alt="">
-                        <div class="hover-container d-flex justify-content-center align-items-center">
-                            <i class="fa-solid fa-link fs-3"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="img-container">
-                        <img src="../assets/images/case-study-gallery-6-1.jpg" alt="">
-                        <div class="hover-container d-flex justify-content-center align-items-center">
-                            <i class="fa-solid fa-link fs-3"></i>
-                        </div>
-                    </div>
-                </div>
+                <WorkCard v-for="singleInfo in info" :info="singleInfo"></WorkCard>
                 <div class="col-12 btn-container py-4">
                     <button class="btn big brand-primary rounded-pill me-3">view our work</button>
                 </div>
@@ -68,7 +51,7 @@ export default {}
     </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use '../style/partials/variables' as *;
 
 .what-we-work {
