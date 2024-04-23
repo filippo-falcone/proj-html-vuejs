@@ -131,6 +131,12 @@ export default {}
                     font-size: .625rem;
                 }
             }
+
+            &:hover {
+                h4 {
+                    color: $brand-secondary;
+                }
+            }
         }
     }
 }</style>
