@@ -1,5 +1,6 @@
 <script>
 import AppHero from './AppHero.vue';
+import AppNews from './AppNews.vue';
 import AppPlans from './AppPlans.vue';
 import AppWeAre from './AppWeAre.vue';
 import AppWeDo from './AppWeDo.vue';
@@ -11,7 +12,8 @@ export default {
         AppWeAre,
         AppWeDo,
         AppWork,
-        AppPlans
+        AppPlans,
+        AppNews
     }
 }
 </script>
@@ -22,6 +24,7 @@ export default {
     <AppWeDo></AppWeDo>
     <AppWork></AppWork>
     <AppPlans></AppPlans>
+    <AppNews></AppNews>
 </template>
 
 <style scoped lang="scss"></style>
