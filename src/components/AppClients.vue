@@ -32,7 +32,7 @@ export default {
 </script>
 
 <template>
-    <section class="clients">
+    <section id="clients">
         <div class="container text-center">
             <div class="row justify-content-center">
                 <h3 class="mb-4">What Our  Clients Say</h3>
@@ -71,7 +71,7 @@ export default {
 <style scoped lang="scss">
 @use '../style/partials/variables' as *;
 
-.clients {
+#clients {
     padding-top: 6.25rem;
 
     .row {

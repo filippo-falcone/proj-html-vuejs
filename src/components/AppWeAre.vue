@@ -33,7 +33,7 @@ export default {
 </script>
 
 <template>
-    <section class="who-we-are">
+    <section id="who-we-are">
         <div class="container text-center pt-5">
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
@@ -54,7 +54,7 @@ export default {
 <style lang="scss">
 @use '../style/partials/variables' as *;
 
-.who-we-are {
+#who-we-are {
     background-color: $brand-light-primary;
     
     .row {

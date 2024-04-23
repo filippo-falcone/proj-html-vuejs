@@ -1,6 +1,6 @@
 <script>
 import AppClients from './AppClients.vue';
-import AppConsultation from './AppConsultation.vue';
+import AppContactUs from './AppContactUs.vue';
 import AppHero from './AppHero.vue';
 import AppNews from './AppNews.vue';
 import AppPlans from './AppPlans.vue';
@@ -11,7 +11,7 @@ import AppWork from './AppWork.vue';
 export default {
     components: {
         AppClients,
-        AppConsultation,
+        AppContactUs,
         AppHero,
         AppNews,
         AppPlans,
@@ -30,7 +30,7 @@ export default {
     <AppPlans></AppPlans>
     <AppNews></AppNews>
     <AppClients></AppClients>
-    <AppConsultation></AppConsultation>
+    <AppContactUs></AppContactUs>
 </template>
 
 <style scoped lang="scss"></style>

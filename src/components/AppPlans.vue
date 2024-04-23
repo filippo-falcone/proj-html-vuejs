@@ -51,7 +51,7 @@ export default {
 </script>
 
 <template>
-    <section class="plans">
+    <section id="plans">
         <div class="container text-center">
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
@@ -69,7 +69,7 @@ export default {
 <style lang="scss">
 @use '../style/partials/variables' as *;
 
-.plans {
+#plans {
     padding-top: 6.25rem;
     padding-bottom: 6.25rem;
     background-image: url(../assets/images/background1.jpg);

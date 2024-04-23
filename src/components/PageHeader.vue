@@ -29,7 +29,7 @@ export default {
                 <div class="collapse navbar-collapse flex-grow-0" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li v-for="linkInfo, index in linksInfo" class="nav-item d-flex align-items-center me-4" @click="activeLink(index)">
-                            <a v-if="!linkInfo.button" class="nav-link" :class="{'active': index == activeItem}">{{ linkInfo.name }}</a>
+                            <a v-if="!linkInfo.button" class="nav-link" :class="{'active': index == activeItem}" :href="linkInfo.href">{{ linkInfo.name }}</a>
                             <button v-if="linkInfo.name === 'Careers'" class="btn small">apply</button>
                             <button v-if="linkInfo.button" class="btn big brand-primary rounded-pill">{{ linkInfo.name }}</button>
                         </li>

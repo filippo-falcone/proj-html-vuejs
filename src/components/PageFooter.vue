@@ -24,7 +24,7 @@ export default {
                 </a>
             <ul class="navbar-nav flex-row flex-wrap align-items-center mb-lg-0">
                 <li v-for="linkInfo, index in linksInfo" class="nav-item d-flex align-items-center me-4" @click="activeLink(index)">
-                    <a class="nav-link" :class="{'active': index == activeItem}">{{ linkInfo.name }}</a>
+                    <a class="nav-link" :class="{'active': index == activeItem}" :href="linkInfo.href">{{ linkInfo.name }}</a>
                 </li>
             </ul>
             <div class="copyright mt-5 mb-4">

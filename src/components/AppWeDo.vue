@@ -39,7 +39,7 @@ export default {
 </script>
 
 <template>
-    <section class="what-we-do">
+    <section id="what-we-do">
         <div class="container text-center pt-5">
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
@@ -57,7 +57,7 @@ export default {
 <style lang="scss">
 @use '../style/partials/variables' as *;
 
-.what-we-do {
+#what-we-do {
     padding-top: 2rem;
     padding-bottom: 6.25rem;
     background-color: $brand-tertiary;

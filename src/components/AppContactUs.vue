@@ -3,7 +3,7 @@ export default {}
 </script>
 
 <template>
-    <section class="consultation">
+    <section id="contact-us">
         <div class="container d-flex flex-column align-items-center text-center">
             <div class="text">
                 <h3 class="mb-4">Start Your Free Consultation</h3>
@@ -19,7 +19,7 @@ export default {}
 <style scoped lang="scss">
 @use '../style/partials/variables' as *;
 
-.consultation {
+#contact-us {
     padding-top: 6.25rem;
     padding-bottom: 6.25rem;
     background-image: url(../assets/images/CTA-seo-1.jpg);

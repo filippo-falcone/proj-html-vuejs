@@ -14,31 +14,38 @@ export default {
       links: [
       {
         name: 'Home',
-        button: false
+        button: false,
+        href: '#'
       },
       {
         name: 'Who We Are',
-        button: false
+        button: false,
+        href: '#who-we-are'
       },
       {
         name: 'What We Do',
-        button: false
+        button: false,
+        href: '#what-we-do'
       },
       {
         name: 'What We Work',
-        button: false
+        button: false,
+        href: '#what-we-work'
       },
       {
         name: 'Careers',
-        button: false
+        button: false,
+        href: '#plans'
       },
       {
         name: 'News',
-        button: false
+        button: false,
+        href: '#news'
       },
       {
         name: 'Get in Touch Now',
-        button: true
+        button: true,
+        href: '#contact-us'
       }
       ],
       isShow: ''
