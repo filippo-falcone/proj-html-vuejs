@@ -27,11 +27,33 @@ export default {
                     <a class="nav-link" :class="{'active': index == activeItem}">{{ linkInfo.name }}</a>
                 </li>
             </ul>
-            <div class="copyright mt-5">
+            <div class="copyright mt-5 mb-4">
                 <small class="pe-2">© Copyright 2012-2024</small>
                 <small class="px-2">Avada Theme by <a href="https://boolean.careers/" target="_blank">Boolean</a></small>
                 <small class="px-2">All Rights Reserved</small>
                 <small class="ps-2 pe-3">Powered by <a href="https://github.com/filippo-falcone" target="_blank">filippo-falcone</a></small>
+            </div>
+            <div class="social d-flex justify-content-between align-items-center">
+                <div class="me-3">
+                    <a href="#">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                </div>
+                <div class="me-3">
+                    <a href="#">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+                <div class="me-3">
+                    <a href="#">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                </div>
+                <div class="me-3">
+                    <a href="#">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
@@ -71,7 +93,16 @@ footer {
             text-decoration: none;
 
             &:hover {
-                text-decoration: underline;
+                color: $brand-primary;
+            }
+        }
+    }
+
+    .social {
+        a {
+            color: $brand-dark-light;
+            &:hover {
+                color: $brand-primary;
             }
         }
     }
