@@ -55,7 +55,7 @@ export default {
         }
 
         .col {
-            background-color: #ffffff;
+            background-color: $brand-light-tertiary;
 
             &:hover {
                 h4 {

@@ -47,7 +47,7 @@ export default {}
 .what-we-do {
     padding-top: 2rem;
     padding-bottom: 6.25rem;
-    background-color: #051642;
+    background-color: $brand-tertiary;
     background-image: url(../assets/images/pattern_background.png);
     background-position: center;
     background-size: contain;
@@ -67,7 +67,7 @@ export default {}
         }
 
         .col {
-            background-color: #071b50;
+            background-color: $brand-tertiary-light;
 
             &:hover {
                 h4 {
