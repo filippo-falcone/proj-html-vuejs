@@ -3,7 +3,7 @@ export default {}
 </script>
 
 <template>
-    <section class="what-we-work py-5">
+    <section class="what-we-work">
         <div class="container text-center">
             <div class="row g-3">
                 <div class="col-12 d-flex justify-content-center">
@@ -60,7 +60,7 @@ export default {}
                         </div>
                     </div>
                 </div>
-                <div class="col-12 btn-container pt-4">
+                <div class="col-12 btn-container py-4">
                     <button class="btn big brand-primary rounded-pill me-3">view our work</button>
                 </div>
            </div>
@@ -72,6 +72,8 @@ export default {}
 @use '../style/partials/variables' as *;
 
 .what-we-work {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
     .row {
         .col-12 {
             .text {

@@ -70,6 +70,16 @@ p {
         color: $brand-secondary;
       }
     }
+
+    &.brand-outline-dark {
+      border: 1px solid $brand-dark;
+      color: $brand-dark;
+
+      &:hover {
+        border: 1px solid $brand-secondary;
+        color: $brand-secondary;
+      }
+    }
   }
 }
 </style>
