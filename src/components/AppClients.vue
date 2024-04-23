@@ -1,24 +1,52 @@
 <script>
-export default {}
+export default {
+    data() {
+        return {
+            clients: [
+                {
+                    image: 'testimonials-1',
+                    text: 'Beauty is when you can appreciate yourself. When you love yourself, that’s when you’re most beautiful.',
+                    name: 'Shelia McCourtney',
+                    profession: 'architect'
+                },
+                {
+                    image: 'testimonials-2',
+                    text: 'Ability proceeds from a fusion of skills, knowledge, understanding and imagination, consolidated by ecperience.',
+                    name: 'Luis Desalvo',
+                    profession: 'creo tech'
+                }
+            ],
+            activeItem: 0,
+        };
+    },
+    methods: {
+        nextSlide() {
+            this.activeItem < this.clients.length - 1 ? this.activeItem++ : this.activeItem = 0;
+            console.log(this.activeItem);
+        },
+        getImageUrl(name) {
+            return new URL(`../assets/images/${name}.jpg`, import.meta.url).href
+        }
+    }
+}
 </script>
 
 <template>
     <section class="clients">
         <div class="container text-center">
             <div class="row justify-content-center">
+                <h3 class="mb-4">What Our  Clients Say</h3>
                 <div class="col-7">
-                    <h3 class="mb-5">What Our  Clients Say</h3>
                     <div class="img-container my-4">
-                        <img src="../assets/images/testimonials-2.jpg" alt="">
+                        <img :src="getImageUrl(clients[activeItem].image)" :alt="clients[activeItem].name">
                     </div>
-                    <i>Ability proceeds from a fusion of skills, knowledge, understanding and imagination, consolidated by ecperience.</i>
+                    <i>{{ clients[activeItem].text }}</i>
                     <div class="my-4">
-                        <strong>Luis Desalvo</strong>
-                        <span class="text-uppercase">, creo tech</span>
+                        <strong>{{ clients[activeItem].name }}</strong>
+                        <span class="text-uppercase">, {{ clients[activeItem].profession }}</span>
                     </div>
                     <div class="points-container d-flex justify-content-center">
-                        <div class="point me-2"></div>
-                        <div class="point active"></div>
+                        <div v-for="i, index in 2" class="point me-2" :class="{'active': index == activeItem}" @click="nextSlide"></div>
                     </div>
                 </div>
             </div>
@@ -58,12 +86,11 @@ export default {}
                 .point {
                     width: .75rem;
                     height: .75rem;
-                    background-color: $brand-dark;
+                    border: 1px solid $brand-dark;
                     border-radius: 50%;
                     
                     &.active {
-                        background-color: transparent;
-                        border: 1px solid $brand-dark;
+                        background-color: $brand-dark;
                     }
                 }
             }
