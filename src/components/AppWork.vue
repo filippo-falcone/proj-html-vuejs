@@ -74,6 +74,8 @@ export default {}
 .what-we-work {
     padding-top: 6.25rem;
     padding-bottom: 6.25rem;
+    background-color: $brand-light-secondary;
+
     .row {
         .col-12 {
             .text {
