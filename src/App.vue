@@ -40,9 +40,28 @@ export default {
         name: 'Get in Touch Now',
         button: true
       }
-    ]
+      ],
+      isShow: ''
     };
-  } 
+  },
+  methods: {
+    showButtonToScroll() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        this.isShow = 'active';
+      } else {
+        this.isShow = '';
+      }
+    },
+    scrollTop() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  },
+  mounted() {
+    window.onscroll = () => {
+      this.showButtonToScroll();
+    }
+  }
 }
 </script>
 
@@ -50,6 +69,9 @@ export default {
   <PageHeader :linksInfo="links"></PageHeader>
   <PageMain></PageMain>
   <PageFooter :linksInfo="links"></PageFooter>
+  <button class="btn small brand-dark" :class="isShow" @click="scrollTop">
+    <i class="fa-solid fa-chevron-up"></i>  
+  </button>
 </template>
 
 <style lang="scss">
@@ -61,6 +83,33 @@ p {
 }
 
 .btn {
+  &.small{
+    &.brand-dark {
+      width: 2.3125rem;
+      height: 1.75rem;
+      background-color: $brand-dark;
+      border-color: transparent;
+      border-radius: 0.375rem 0.375rem 0 0;
+      color: $brand-light-tertiary;
+      font-size: 10px;
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 40px;
+      z-index: 1;
+
+      &.active {
+        display: block;
+      }
+
+      &:hover {
+        background-color: $brand-dark-light;
+      }
+    }
+
+    
+  }
+
   &.big {
     &.brand-primary {
       background-color: $brand-primary;
