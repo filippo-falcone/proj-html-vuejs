@@ -15,35 +15,53 @@ export default {}
                 <div class="col-4">
                     <div class="img-container">
                         <img src="../assets/images/case-study-gallery-3-1.jpg" alt="">
+                        <div class="hover-container d-flex justify-content-center align-items-center">
+                            <i class="fa-solid fa-link fs-3"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="img-container">
                         <img src="../assets/images/case-study-gallery-2.jpg" alt="">
+                        <div class="hover-container d-flex justify-content-center align-items-center">
+                            <i class="fa-solid fa-link fs-3"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="img-container">
                         <img src="../assets/images/case-study-gallery-1-1.jpg" alt="">
+                        <div class="hover-container d-flex justify-content-center align-items-center">
+                            <i class="fa-solid fa-link fs-3"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="img-container">
                         <img src="../assets/images/case-study-gallery-4-1.jpg" alt="">
+                        <div class="hover-container d-flex justify-content-center align-items-center">
+                            <i class="fa-solid fa-link fs-3"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="img-container">
                         <img src="../assets/images/case-study-gallery-5-1.jpg" alt="">
+                        <div class="hover-container d-flex justify-content-center align-items-center">
+                            <i class="fa-solid fa-link fs-3"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="col-4">
                     <div class="img-container">
                         <img src="../assets/images/case-study-gallery-6-1.jpg" alt="">
+                        <div class="hover-container d-flex justify-content-center align-items-center">
+                            <i class="fa-solid fa-link fs-3"></i>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 btn-container pt-4">
-                    <button class="btn big brand-primary rounded-pill me-3">buy avada now</button>
+                    <button class="btn big brand-primary rounded-pill me-3">view our work</button>
                 </div>
            </div>
         </div>
@@ -51,11 +69,36 @@ export default {}
 </template>
 
 <style scoped lang="scss">
+@use '../style/partials/variables' as *;
+
 .what-we-work {
     .row {
         .col-12 {
             .text {
                 width: 40%;
+            }
+        }
+
+        .col-4 {
+            .img-container {
+                position: relative;
+
+                &:hover {
+                    .hover-container {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            .hover-container {
+                background-image: linear-gradient(to bottom, $brand-secondary-light, $brand-light-secondary);
+                color: $brand-light-primary;
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                opacity: 0;
             }
         }
     }
