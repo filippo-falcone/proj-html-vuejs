@@ -22,7 +22,7 @@ export default {
             <a class="mt-4 mb-5" href="#">
                     <img src="../assets/images/logo_seo_1x.png" alt="AvadaSEO logo">
                 </a>
-            <ul class="navbar-nav flex-row align-items-center mb-lg-0">
+            <ul class="navbar-nav flex-row flex-wrap align-items-center mb-lg-0">
                 <li v-for="linkInfo, index in linksInfo" class="nav-item d-flex align-items-center me-4" @click="activeLink(index)">
                     <a class="nav-link" :class="{'active': index == activeItem}">{{ linkInfo.name }}</a>
                 </li>

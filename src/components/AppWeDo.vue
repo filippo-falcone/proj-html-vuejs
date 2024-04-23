@@ -41,7 +41,7 @@ export default {
 <template>
     <section class="what-we-do">
         <div class="container text-center pt-5">
-            <div class="row g-5">
+            <div class="row">
                 <div class="col-12 d-flex justify-content-center">
                     <div class="text">
                         <h3 class="mb-4">See Our Top Notch Services</h3>

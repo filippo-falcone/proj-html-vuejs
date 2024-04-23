@@ -53,7 +53,7 @@ export default {
 <template>
     <section class="plans">
         <div class="container text-center">
-            <div class="row g-5">
+            <div class="row">
                 <div class="col-12 d-flex justify-content-center">
                     <div class="text">
                         <h3 class="mb-4">Our Plans</h3>

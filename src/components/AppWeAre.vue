@@ -35,7 +35,7 @@ export default {
 <template>
     <section class="who-we-are">
         <div class="container text-center pt-5">
-            <div class="row g-5">
+            <div class="row">
                 <div class="col-12 d-flex justify-content-center">
                     <div class="text">
                         <h3 class="mb-4">Meet The New Agency SEO Template From The Avada Team</h3>
