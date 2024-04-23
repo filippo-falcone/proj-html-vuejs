@@ -1,5 +1,53 @@
 <script>
-export default {}
+import PlansCard from './PlansCard.vue';
+
+export default {
+    components: {
+        PlansCard
+    },
+    data() {
+        return {
+            info: [
+                {
+                    title: 'Standard',
+                    price: 19,
+                    cent: 99,
+                    project: 5,
+                    storage: 5,
+                    usage: 'Unlimited',
+                    advised: false
+                },
+                {
+                    title: 'Premium',
+                    price: 29,
+                    cent: 99,
+                    project: 10,
+                    storage: 15,
+                    usage: 'Unlimited',
+                    advised: false
+                },
+                {
+                    title: 'Professional',
+                    price: 39,
+                    cent: 99,
+                    project: 15,
+                    storage: 30,
+                    usage: 'Unlimited',
+                    advised: true
+                },
+                {
+                    title: 'Extreme',
+                    price: 59,
+                    cent: 99,
+                    project: 'Unlimited',
+                    storage: 'Unlimited',
+                    usage: 'Unlimited',
+                    advised: false
+                }
+            ]
+        };
+    }
+}
 </script>
 
 <template>
@@ -8,84 +56,17 @@ export default {}
             <div class="row g-5">
                 <div class="col-12 d-flex justify-content-center">
                     <div class="text">
-                        <h3 class="mb-4">Our Work</h3>
+                        <h3 class="mb-4">Our Plans</h3>
                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
                     </div>
-                 </div>
-                 <div class="col d-flex flex-column align-items-center py-5 me-4">
-                    <h4 class="mb-3">Standard</h4>
-                    <div class="price-container d-flex align-items-center py-3">
-                        <div class="value">$</div>
-                        <div class="price fs-1">19</div>
-                        <div>
-                            <div class="price cent text-start">99</div>
-                            <div class="month">monthly</div>
-                        </div>
-                    </div>
-                    <div class="pojects py-3">5 Projects</div>
-                    <div class="storage py-3">5 GB Storage</div>
-                    <div class="usage py-3">Unlimited Users</div>
-                    <div class="btn-container py-3">
-                        <button class="btn big brand-outline-dark rounded-pill">start today</button>
-                    </div>
                 </div>
-                 <div class="col d-flex flex-column align-items-center py-5 me-4">
-                    <h4 class="mb-3">Premium</h4>
-                    <div class="price-container d-flex align-items-center py-3">
-                        <div class="value">$</div>
-                        <div class="price fs-1">29</div>
-                        <div>
-                            <div class="price cent text-start">99</div>
-                            <div class="month">monthly</div>
-                        </div>
-                    </div>
-                    <div class="pojects py-3">10 Projects</div>
-                    <div class="storage py-3">15 GB Storage</div>
-                    <div class="usage py-3">Unlimited Users</div>
-                    <div class="btn-container py-3">
-                        <button class="btn big brand-outline-dark rounded-pill">start today</button>
-                    </div>
-                </div>
-                 <div class="col d-flex flex-column align-items-center py-5 me-4">
-                    <h4 class="mb-3">Professional</h4>
-                    <div class="price-container d-flex align-items-center py-3">
-                        <div class="value">$</div>
-                        <div class="price fs-1">39</div>
-                        <div>
-                            <div class="price cent text-start">99</div>
-                            <div class="month">monthly</div>
-                        </div>
-                    </div>
-                    <div class="pojects py-3">15 Projects</div>
-                    <div class="storage py-3">30 GB Storage</div>
-                    <div class="usage py-3">Unlimited Users</div>
-                    <div class="btn-container py-3">
-                        <button class="btn big brand-outline-dark rounded-pill">start today</button>
-                    </div>
-                </div>
-                 <div class="col d-flex flex-column align-items-center py-5 me-4">
-                    <h4 class="mb-3">Extreme</h4>
-                    <div class="price-container d-flex align-items-center py-3">
-                        <div class="value">$</div>
-                        <div class="price fs-1">59</div>
-                        <div>
-                            <div class="price cent text-start">99</div>
-                            <div class="month">monthly</div>
-                        </div>
-                    </div>
-                    <div class="pojects py-3">Unlimited Projects</div>
-                    <div class="storage py-3">Unlimited Storage</div>
-                    <div class="usage py-3">Unlimited Users</div>
-                    <div class="btn-container py-3">
-                        <button class="btn big brand-outline-dark rounded-pill">start today</button>
-                    </div>
-                </div>
+                <PlansCard v-for="singleInfo in info" :info="singleInfo"></PlansCard>
             </div>
         </div>
     </section>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
 @use '../style/partials/variables' as *;
 
 .plans {
