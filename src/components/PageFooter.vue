@@ -19,14 +19,20 @@ export default {
 <template>
     <footer>
         <div class="container d-flex flex-column align-items-center">
-            <a href="#">
+            <a class="mt-4 mb-5" href="#">
                     <img src="../assets/images/logo_seo_1x.png" alt="AvadaSEO logo">
                 </a>
-            <ul class="navbar-nav flex-row my-5 mb-lg-0">
+            <ul class="navbar-nav flex-row align-items-center mb-lg-0">
                 <li v-for="linkInfo, index in linksInfo" class="nav-item d-flex align-items-center me-4" @click="activeLink(index)">
                     <a class="nav-link" :class="{'active': index == activeItem}">{{ linkInfo.name }}</a>
                 </li>
             </ul>
+            <div class="copyright mt-5">
+                <small class="pe-2">© Copyright 2012-2024</small>
+                <small class="px-2">Avada Theme by <a href="https://boolean.careers/" target="_blank">Boolean</a></small>
+                <small class="px-2">All Rights Reserved</small>
+                <small class="ps-2 pe-3">Powered by <a href="https://github.com/filippo-falcone" target="_blank">filippo-falcone</a></small>
+            </div>
         </div>
     </footer>
 </template>
@@ -37,7 +43,7 @@ export default {
 footer {
     padding-top: 3.125rem;
     padding-bottom: 3.125rem;
-    
+
     .navbar-nav {
         .nav-link {
             cursor: pointer;
@@ -48,6 +54,24 @@ footer {
 
             &:hover {
                 color: $brand-primary;
+            }
+        }
+    }
+
+    .copyright {
+        color: $brand-dark-light;
+
+        small:not(:last-child) {
+            border-right: 1px solid $brand-dark-light;
+        }
+        
+        a {
+            color: $brand-dark-light;
+            font-weight: 700;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
             }
         }
     }
