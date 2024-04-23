@@ -40,7 +40,7 @@ export default {
                     <div class="img-container my-4">
                         <img :src="getImageUrl(clients[activeItem].image)" :alt="clients[activeItem].name">
                     </div>
-                    <i>{{ clients[activeItem].text }}</i>
+                    <i class="px-4">{{ clients[activeItem].text }}</i>
                     <div class="my-4">
                         <strong>{{ clients[activeItem].name }}</strong>
                         <span class="text-uppercase">, {{ clients[activeItem].profession }}</span>
