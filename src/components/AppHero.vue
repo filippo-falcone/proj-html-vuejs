@@ -3,7 +3,7 @@ export default {}
 </script>
 
 <template>
-    <section class="hero">
+    <section id="hero">
         <div class="container h-100">
             <div class="row align-items-center h-100">
                 <div class="col-4">
@@ -22,7 +22,7 @@ export default {}
 <style scoped lang="scss">
 @use '../style/partials/variables' as *;
 
-.hero {
+#hero {
     height: 44.5rem;
     margin-top: -5rem;
     background-image: url(../assets/images/1-hero-image.png);
