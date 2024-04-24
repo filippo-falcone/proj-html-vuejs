@@ -95,7 +95,7 @@ export default {
 
             .price-container {
                 .value {
-                    padding-top: 13px ;
+                    padding-top: .8125rem ;
                     font-size: .875rem;
                     align-self: flex-start;
                 }
@@ -104,7 +104,7 @@ export default {
                     color: $brand-secondary;
 
                     &.cent {
-                         font-size: 14px;
+                         font-size: .875rem;
                     }
                 }
 

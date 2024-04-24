@@ -88,9 +88,9 @@ export default {
   display: none;
   position: fixed;
   bottom: 0;
-  right: 40px;
+  right: 2.5rem;
   z-index: 1;
-  
+
   &.active {
       display: block;
   }

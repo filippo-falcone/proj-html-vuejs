@@ -58,7 +58,7 @@ header {
         }
         .btn {
             &.small {
-                border: 1px solid $brand-primary;
+                border: .0625rem solid $brand-primary;
                 color: $brand-primary;
 
                 &:hover {

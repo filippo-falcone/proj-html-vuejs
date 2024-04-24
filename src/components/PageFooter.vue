@@ -84,7 +84,7 @@ footer {
         color: $brand-dark-light;
 
         small:not(:last-child) {
-            border-right: 1px solid $brand-dark-light;
+            border-right: .0625rem solid $brand-dark-light;
         }
         
         a {

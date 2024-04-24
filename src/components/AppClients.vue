@@ -86,7 +86,7 @@ export default {
                 .point {
                     width: .75rem;
                     height: .75rem;
-                    border: 1px solid $brand-dark;
+                    border: .0625rem solid $brand-dark;
                     border-radius: 50%;
                     
                     &.active {
@@ -98,7 +98,7 @@ export default {
     }
     
     .partner-logo-container {
-        border-top: 1px solid lightgray;
+        border-top: .0625rem solid lightgray;
         padding-right: 6.25rem;
         padding-left: 6.25rem;
 
