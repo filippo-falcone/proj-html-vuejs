@@ -24,7 +24,6 @@ export default {}
 
 #hero {
     height: 44.5rem;
-    margin-top: -5rem;
     background-image: url(../assets/images/1-hero-image.png);
     background-size: cover;
     background-repeat: no-repeat;

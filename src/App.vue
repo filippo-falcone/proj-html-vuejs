@@ -48,7 +48,8 @@ export default {
         href: '#contact-us'
       }
       ],
-      isShow: ''
+      isShow: '',
+      isActive: ''
     };
   },
   methods: {
@@ -67,13 +68,18 @@ export default {
   mounted() {
     window.onscroll = () => {
       this.showButtonToScroll();
+      if (window.scrollY > 712) {
+          this.isActive = 'active';
+      } else {
+          this.isActive = '';
+      }
     }
   }
 }
 </script>
 
 <template>
-  <PageHeader :linksInfo="links"></PageHeader>
+  <PageHeader :linksInfo="links" :isActive="isActive"></PageHeader>
   <PageMain></PageMain>
   <PageFooter :linksInfo="links"></PageFooter>
   <button class="scroll-up btn small brand-dark" :class="isShow" @click="scrollTop">

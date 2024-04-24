@@ -33,6 +33,16 @@ p {
                 background-color: $brand-dark-light;
             }
         }
+
+        &.brand-outline-primary {
+            border: .0625rem solid $brand-primary;
+            color: $brand-primary;
+
+            &:hover {
+                background-color: $brand-primary;
+                color: $brand-light-secondary;
+            }
+        }
     }
 
     &.big {

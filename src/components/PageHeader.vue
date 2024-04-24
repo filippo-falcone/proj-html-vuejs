@@ -1,7 +1,10 @@
 <script>
+import { callWithAsyncErrorHandling, onMounted } from 'vue';
+
 export default {
     props: {
-        linksInfo: Array
+        linksInfo: Array,
+        isActive: String
     },
     data() {
         return {
@@ -17,7 +20,7 @@ export default {
 </script>
 
 <template>
-    <header>
+    <header :class="isActive">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -30,7 +33,7 @@ export default {
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li v-for="linkInfo, index in linksInfo" class="nav-item d-flex align-items-center me-4" @click="activeLink(index)">
                             <a v-if="!linkInfo.button" class="nav-link" :class="{'active': index == activeItem}" :href="linkInfo.href">{{ linkInfo.name }}</a>
-                            <button v-if="linkInfo.name === 'Careers'" class="btn small">apply</button>
+                            <button v-if="linkInfo.name === 'Careers'" class="btn small brand-outline-primary">apply</button>
                             <button v-if="linkInfo.button" class="btn big brand-primary rounded-pill">{{ linkInfo.name }}</button>
                         </li>
                     </ul>
@@ -43,27 +46,40 @@ export default {
 <style scoped lang="scss">
 @use '../style/partials/variables' as *;
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+
+    &.active {
+        background-color: $brand-tertiary;
+    }
+
     .navbar {
-        .nav-link {
-            color: $brand-light-secondary;
-            cursor: pointer;
-
-            &.active {
-                color: $brand-primary;
-            }
-
-            &:hover {
-                color: $brand-primary;
-            }
-        }
-        .btn {
-            &.small {
-                border: .0625rem solid $brand-primary;
-                color: $brand-primary;
-
+        .navbar-collapse {
+            .nav-link {
+                color: $brand-light-secondary;
+                cursor: pointer;
+    
+                &.active {
+                    color: $brand-primary;
+                }
+    
                 &:hover {
-                    background-color: $brand-primary;
-                    color: $brand-light-secondary;
+                    color: $brand-primary;
+                }
+            }
+
+            &.collapsing {
+                .nav-item {
+                    justify-content: flex-end;
+                }
+            }
+
+            &.show {
+                .nav-item {
+                    justify-content: flex-end;
                 }
             }
         }
