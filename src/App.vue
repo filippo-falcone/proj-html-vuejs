@@ -66,9 +66,9 @@ export default {
     }
   },
   mounted() {
-    window.onscroll = () => {
+    onscroll = () => {
       this.showButtonToScroll();
-      if (window.scrollY > 712) {
+      if (scrollY > 700) {
           this.isActive = 'active';
       } else {
           this.isActive = '';

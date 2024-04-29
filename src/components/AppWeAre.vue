@@ -56,6 +56,8 @@ export default {
 
 #who-we-are {
     background-color: $brand-light-primary;
+    padding-top: 2rem;
+    padding-bottom: 6.25rem;
     
     .row {
         .col-12 {
